@@ -59,6 +59,20 @@ exports.login=asyncHandler(async(req, res)=>{
 
 })
 
+exports.getMe = asyncHandler( async(req, res) =>{
+    //estructura personalizada desde middleware de auth
+    const user = {
+        id: req.user._id,
+        email: req.user.id,
+        name: req.user.name
+    }
+
+    res.status(200).json(user)
+
+    //estructura sin personalizar desde middleware de auth
+    //res.status(200).json(req.user)
+})
+
 
 //generate token
 const generateToken = id =>{
