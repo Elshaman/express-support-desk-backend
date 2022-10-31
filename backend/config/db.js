@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const m = 'mongodb+srv://entershaman:Genkidama8286@cluster0.rpxhk.mongodb.net/?retryWrites=true&w=majority'
+const m = 'mongodb+srv://entershaman:Genkidama8286@cluster0.rpxhk.mongodb.net/supportdesk?retryWrites=true&w=majority'
 
 const connectDB = async() => {
     try {
@@ -15,5 +15,5 @@ const connectDB = async() => {
     }
 }
 
-connectDB()
-//module.exports = connectDB
+//connectDB()
+module.exports = connectDB
